@@ -14,7 +14,8 @@
             <div class="col-md-3 col-sm-6 bg-danger px-3">
                 <form action="" class="mt-5">
                     <div class="form-group mb-2">
-                        <input type="email" class="form-control" placeholder="Email" id="email">
+                        <input type="email" class="form-control" placeholder="Email" id="email" value="Hey there">
+                        dfgdfdgfgf
                     </div>
                     <div class="form-group mb-2">
                         <input type="password" class="form-control" placeholder="Passwword" id="password">
@@ -22,8 +23,10 @@
                     <button class="btn btn-dark" id="login-btn">Sign In</button>
                 </form>
             </div>
-            <div class="col-md-3 col-sm-6 bg-dark">
-
+            <div class="col-md-3 col-sm-6 bg-dark text-white" id="bala-blu">
+                <h1 class="display-5">Hurray</h1>
+                <p>A town hall different from the bala blu, bula by</p>
+                <p>The could not even make a damn pament for a roasted corn for that electricity</p>
             </div>
             
             <div class="col-md-3 col-sm-6 bg-light">
@@ -51,11 +54,21 @@
 
     <script>
         // Selectors
-        // const singleSelct = document.querySelector("div");
-        // const multiSelect = document.querySelectorAll("div");
+        const input = document.querySelector("input");
+        const formDiv = document.querySelector(".form-group");
+        const multiSelect = document.querySelectorAll(".form-group");
+        const form = document.querySelector("form");
 
-        const aa = document.querySelector(".form-control");
-        console.log(aa);
+    //    document.querySelectorAll(".form-control");
+
+
+        // const cc = document.getElementsByTagName("input")
+        // const aa = document.getElementById('div');
+        // const bb = document.getElementsByClassName('form-group');
+       
+        console.log(form.children);
+        // console.log(bb);
+       
     </script>
 </body>
 </html>
