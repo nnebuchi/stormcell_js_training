@@ -9,11 +9,25 @@
         <meta charset=utf-8 />
     </head>
     <body>
+        
         <p>
             <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a>
         </p>
         <button onclick="getAttributes()">Click here to get  attributes value</button>
         
+        <script>
+            function getAttributes(){
+                const getValue = document.querySelector("#w3r");
+                let  getValueType = getValue.getAttribute("type");
+                let  getValueHreflang = getValue.getAttribute("hreflang");
+                let  getValueRel = getValue.getAttribute("rel");
+                let  getValueTarget = getValue.getAttribute("target");
+                let  getValueHref = getValue.getAttribute("href");
+                console.log( getValueType)
+            }
+
         
+
+        </script>
     </body>
 </html>
