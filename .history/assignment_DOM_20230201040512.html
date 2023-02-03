@@ -130,8 +130,6 @@
         // const bb = document.getElementsByClassName('form-group');
        
         // console.log(form.children);
-       
-       
         /*
         // The code block below illustrates how to get the cumputed CSS values of an element
 
@@ -147,11 +145,11 @@
 
 
         
-        
+        /*
         // targetting element(s) using attribute
         
         // Generic Syntax
-        // document.querySelector("[<attribute_name>=<attribute_value>]")
+        document.querySelector("[<attribute_name>=<attribute_value>]")
 
         //  target element with attribute of name = email
         document.querySelectorAll("[type=password]");
@@ -166,14 +164,13 @@
         let detailModalClass =detailModal.getAttribute('class');
         let detailModalIndex = detailModal.getAttribute("tabindex");
         console.log(detailModalIndex);
-        
+        */
 
         
 
         /*
             Here is a function that targets an element using id and modifies the textContent
         */
-       
         function changeButtonText(){
             const viewBtn = document.querySelector("#view-detail-btn");
             viewBtn.textContent = 'Hide Detail';
@@ -191,8 +188,6 @@
             btn.style.backgroundColor = "red";
             btn.style.color = "#ffff";
         }
-
-
     </script>
 </body>
 </html>
