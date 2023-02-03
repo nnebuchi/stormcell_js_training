@@ -117,10 +117,10 @@
 
     <script>
         // Selectors
-        const input = document.querySelector("input");
-        const formDiv = document.querySelector(".form-group");
-        const multiSelect = document.querySelectorAll(".form-group");
-        const form = document.querySelector("form");
+        const input = document.querySelector("#bala-blu");
+        // const formDiv = document.querySelector(".form-group");
+        // const multiSelect = document.querySelectorAll(".form-group");
+        // const form = document.querySelector("form");
 
     //    document.querySelectorAll(".form-control");
 
@@ -128,6 +128,11 @@
         // const cc = document.getElementsByTagName("input")
         // const aa = document.getElementById('div');
         // const bb = document.getElementsByClassName('form-group');
+       
+        // console.log(input.innerHTML);
+        // console.log(input.textContent);
+    console.log(input.children[0].textContent);
+        // console.log(bb);
        
         // console.log(form.children);
        
@@ -153,14 +158,14 @@
         // Generic Syntax
         // document.querySelector("[<attribute_name>=<attribute_value>]")
 
-        //  target element with attribute of name = email
-        document.querySelectorAll("[type=password]");
-        console.log(document.querySelectorAll("[name=email]"));
+        // //  target element with attribute of name = email
+        // document.querySelectorAll("[type=password]");
+        // console.log(document.querySelectorAll("[name=email]"));
 
         
-        const modalBtns = document.querySelectorAll("[data-bs-toggle=modal]");
+        // const modalBtns = document.querySelectorAll("[data-bs-toggle=modal]");
 
-        console.log(modalBtns);
+        // console.log(modalBtns);
 
         const detailModal = document.querySelector("#detail");
         let detailModalClass =detailModal.getAttribute('class');
@@ -170,29 +175,26 @@
 
         
 
-        /*
-            Here is a function that targets an element using id and modifies the textContent
-        */
-       
-        function changeButtonText(){
-            const viewBtn = document.querySelector("#view-detail-btn");
-            viewBtn.textContent = 'Hide Detail';
-        }
+        // /*
+        //     Here is a function that targets an element using id and modifies the textContent
+        // */
+        // function changeButtonText(){
+        //     const viewBtn = document.querySelector("#view-detail-btn");
+        //     viewBtn.textContent = 'Hide Detail';
+        // }
 
-        function setBtnProcessing(){
-            const btn =  document.querySelector(".pay-btn");
-            btn.innerHTML = `Processing... <i class="fa fa-spinner fa-spin"></i>`;
-        }
-
-
-        const toggleButton = () => {
-            const btn = document.querySelector("[victory=sure]");
-            btn.textContent = "Remove Item";
-            btn.style.backgroundColor = "red";
-            btn.style.color = "#ffff";
-        }
+        // function setBtnProcessing(){
+        //     const btn =  document.querySelector(".pay-btn");
+        //     btn.innerHTML = `Processing... <i class="fa fa-spinner fa-spin"></i>`;
+        // }
 
 
+        // const toggleButton = () => {
+        //     const btn = document.querySelector("[victory=sure]");
+        //     btn.textContent = "Remove Item";
+        //     btn.style.backgroundColor = "red";
+        //     btn.style.color = "#ffff";
+        // }
     </script>
-</body>
-</html>
+</body> 
+ </html>

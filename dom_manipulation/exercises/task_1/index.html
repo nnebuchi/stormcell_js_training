@@ -12,20 +12,18 @@
 </head> 
 
 <body>
-    <p id ='text'>JavaScript Exercises - w3resource</p> 
-    <div>
-        <button id="jsstyle" onclick="js_style()">Style</button>
-    </div>
+<p id ='text'>JavaScript Exercises - w3resource</p> 
+<div>
+<button id="jsstyle" onclick="js_style()">Style</button>
+</div>
 
+<script>
+    function js_style(){
+        const ChangeParagraphStyle = document.querySelector("#text")
+        ChangeParagraphStyle.style.color = "red";
+        ChangeParagraphStyle.style.fontSize = "40px";
 
-    <script>
-        const js_style = () =>{
-            const runtext = document.querySelector("#text")
-            runtext.style.color = "green";
-            runtext.style.fontSize = "80px"
-            runtext.style.fontWeight = "bold"
-        }
-
-    </script>
+    }
+</script>
 </body>
 </html>
