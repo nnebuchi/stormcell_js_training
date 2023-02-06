@@ -28,8 +28,13 @@
                             <td>tom@stormcelltech.com</td>
                             <td>Tom</td>
                             <td>
+<<<<<<< HEAD
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
                                 <button onclick="changeColor(event)" class="btn btn-primary btn-sm ">Edit <span><i class="fa fa-edit"></i></span></button>
+=======
+                                <button onclick="deleteRow(event, 'red')" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
+                                <button onclick="changeRowColor(event, 'red')" class="btn btn-primary btn-sm" >Edit <span><i class="fa fa-edit"></i></span></button>
+>>>>>>> e18c86ec62ebdd55344192327a4675918291c367
                             </td>
                         </tr>
                         <tr>
@@ -38,7 +43,11 @@
                             <td>Jerry</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
+<<<<<<< HEAD
                                 <button onclick="changeColor(event)" class="btn btn-primary btn-sm ">Edit <span><i class="fa fa-edit"></i></span></button>
+=======
+                                <button onclick="changeRowColor(event, 'gold')" class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+>>>>>>> e18c86ec62ebdd55344192327a4675918291c367
                             </td>
                         </tr>
                         <tr>
@@ -84,6 +93,7 @@
         // }
         // document.querySelector('tbody').innerHTML = tableContent;
 
+<<<<<<< HEAD
          const deleteRow = (event) => {  
             const clickedBtn = event.target;
         //     // const rowToDelete = clickedBtn.parentElement.parentElement
@@ -97,7 +107,23 @@
         colorToChange.style.backgroundColor = ("yellow");
         
 
+=======
+        const deleteRow = (event) => {
+            // retreive the clicked button
+            const clickedBtn = event.target;
+            // const rowToDelete = clickedBtn.parentElement.parentElement
+
+            // find the closest tr element in the parent tree
+            const rowToDelete = clickedBtn.closest("tr");
+            // remove the closest tr element
+            rowToDelete.remove();
+>>>>>>> e18c86ec62ebdd55344192327a4675918291c367
         }
+
+        const changeRowColor = (event, color) => {
+            event.target.closest("tr").style.backgroundColor = color;
+        }
+
     </script>
 </body>
 </html>
