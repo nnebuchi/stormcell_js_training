@@ -13,7 +13,7 @@
     <section class="py-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <table class="table table-primary table-striped">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -28,8 +28,8 @@
                             <td>tom@stormcelltech.com</td>
                             <td>Tom</td>
                             <td>
-                                <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
-                                <button class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+                                <button onclick="deleteRow(event, 'red')" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
+                                <button onclick="changeRowColor(event, 'red')" class="btn btn-primary btn-sm" >Edit <span><i class="fa fa-edit"></i></span></button>
                             </td>
                         </tr>
                         <tr>
@@ -38,7 +38,7 @@
                             <td>Jerry</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
-                                <button class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+                                <button onclick="changeRowColor(event, 'gold')" class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
                             </td>
                         </tr>
                         <tr>
@@ -85,11 +85,20 @@
         // document.querySelector('tbody').innerHTML = tableContent;
 
         const deleteRow = (event) => {
+            // retreive the clicked button
             const clickedBtn = event.target;
             // const rowToDelete = clickedBtn.parentElement.parentElement
+
+            // find the closest tr element in the parent tree
             const rowToDelete = clickedBtn.closest("tr");
+            // remove the closest tr element
             rowToDelete.remove();
         }
+
+        const changeRowColor = (event, color) => {
+            event.target.closest("tr").style.backgroundColor = color;
+        }
+
     </script>
 </body>
 </html>
