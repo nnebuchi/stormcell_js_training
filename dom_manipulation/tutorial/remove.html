@@ -13,7 +13,7 @@
     <section class="py-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <table class="table table-primary table-striped">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -29,7 +29,7 @@
                             <td>Tom</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
-                                <button class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+                                <button onclick="changeColor(event)" class="btn btn-primary btn-sm ">Edit <span><i class="fa fa-edit"></i></span></button>
                             </td>
                         </tr>
                         <tr>
@@ -38,7 +38,7 @@
                             <td>Jerry</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
-                                <button class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+                                <button onclick="changeColor(event)" class="btn btn-primary btn-sm ">Edit <span><i class="fa fa-edit"></i></span></button>
                             </td>
                         </tr>
                         <tr>
@@ -47,7 +47,7 @@
                             <td>Globus</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
-                                <button class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+                                <button onclick="changeColor(event)" class="btn btn-primary btn-sm ">Edit <span><i class="fa fa-edit"></i></span></button>
                             </td>
                         </tr>
                         <tr>
@@ -56,7 +56,7 @@
                             <td>Son</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <i class="fa fa-trash"></i> </button>
-                                <button class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+                                <button  onclick="changeColor(event)" class="btn btn-primary btn-sm " >Edit <span><i class="fa fa-edit"></i></span></button>
                             </td>
                         </tr>
                     </tbody>
@@ -84,11 +84,19 @@
         // }
         // document.querySelector('tbody').innerHTML = tableContent;
 
-        const deleteRow = (event) => {
+         const deleteRow = (event) => {  
             const clickedBtn = event.target;
-            // const rowToDelete = clickedBtn.parentElement.parentElement
+        //     // const rowToDelete = clickedBtn.parentElement.parentElement
             const rowToDelete = clickedBtn.closest("tr");
-            rowToDelete.remove();
+             rowToDelete.remove();
+         }
+
+        const changeColor = (ev) => {
+        const clickedBtn = event.target;
+        const colorToChange = clickedBtn.closest("tr");
+        colorToChange.style.backgroundColor = ("yellow");
+        
+
         }
     </script>
 </body>
