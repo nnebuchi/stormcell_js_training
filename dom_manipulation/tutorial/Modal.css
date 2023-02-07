@@ -41,3 +41,12 @@ button{
     border: 1px white;
     box-shadow: 5px 5px 55px rgba(0, 0, 0, 0.826);
 }
+
+button:hover{
+ background-color: brown;
+ color: white;
+}
+button:active{
+ background-color: red;
+}
+
