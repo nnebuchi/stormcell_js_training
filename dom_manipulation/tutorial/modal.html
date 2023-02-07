@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Modal.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="modal">
+    <h3 class="Head">Javascript Assignment</h3>
+    <p>On a fresh page, create a button. When the button is clicked, it should open a pop up modal</p>
+    <h3>Hint:</h3>
+    <p>Design the modal as you will love it to appear and then hide it afterwards.</p>
+  </div>
+  
+  <button onclick="showModalButton(click)">Show Modal</button>
+ 
+  <script>
+    function showModalButton(click){
+      const modal = document.querySelector(".modal");
+      modal.style.display = "block";
+    }
+  </script>
+  
+</html>
