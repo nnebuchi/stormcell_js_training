@@ -12,23 +12,36 @@
 <body>
 
     <style>
-        .custom-card-div{
-            display: none;
-        }
-        /* #hiddenDiv{
-            display: none;
+        /* .custom-card-div{
+            
+           
         } */
+        #hiddenDiv{
+            position: absolute; 
+            display: none;
+            top:50px;
+            left: 33%;
+
+        }
     </style>
+    
     <section class="py-5 bg-primary">
         <div class="row justify-content-center text-center">
             <div class="col-md-6">
                 <button onclick="displayModal(event)" class="btn btn-danger btn-sm text-center" type="submit">Click Here</button>
             </div>
         </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur at enim necessitatibus quaerat unde est voluptatem, totam dolores! Quibusdam velit nobis quos dolorem dolores reprehenderit cupiditate voluptates, libero ullam eum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit earum fuga, labore ea hic perferendis quo aliquam cumque sequi voluptatum porro a. Tempora minima excepturi labore quae porro modi vitae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, reprehenderit? Voluptas nesciunt eveniet animi odit laboriosam perferendis explicabo numquam vitae! Provident sapiente debitis dolores voluptatibus consectetur, officiis molestiae! Officia, eos!
 
-        <div class="row justify-content-center py-5 " id="hiddenDiv">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut voluptatem reiciendis cupiditate harum minima consequatur? Veniam error repellendus laboriosam, tenetur ex possimus tempore voluptate fugiat, vitae aspernatur, corporis ullam.
+        </div>
+
+        <!-- <div class="row justify-content-center py-5 position-relative" >
             <div class="col-md-5">
-                <div class="card bg-light custom-card-div">
+                <div class="card bg-light custom-card-div" id="hiddenDiv">
                     <form class="p-5 ">
                         <div class="form-group p-2">
                             <label for="exampleInputEmail1">Email address</label>
@@ -38,17 +51,34 @@
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                         </div>
-                        <!-- <div class="form-check p-2">
+                       <div class="form-check p-2">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div> -->
+                        </div>
                         <button type="submit" class="btn btn-success mx-auto">Submit</button>
                         </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
+    <div class="card bg-light custom-card-div" id="hiddenDiv">
+        <form class="p-5 ">
+            <div class="form-group p-2">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group p-2">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <!-- <div class="form-check p-2">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <button type="submit" class="btn btn-success mx-auto">Submit</button>
+        </form>
+    </div>
     <script>
 
     // Design a modal in a div and hide it, click on the button, let the modal show up
