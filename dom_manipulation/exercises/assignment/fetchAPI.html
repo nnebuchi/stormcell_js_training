@@ -7,10 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+
+     
     <button onclick="getBloodType()">Click Blood Type</button>
     <button onclick="getcreditCards()">Click Credit Cards</button>
     <button onclick="getbears()">Click Bears</button>
     <button onclick="getbanks()">Click Bears</button>
+
+    <button onclick="getAll()">Get All</button>
 
     <script>
 
@@ -58,6 +62,13 @@
           })
         }
       
+        const getAll = async ()=>{
+          getBloodType();
+          getcreditCards();
+          getbears();
+          getbanks();
+
+        }
     </script>
 </body>
 </html>
