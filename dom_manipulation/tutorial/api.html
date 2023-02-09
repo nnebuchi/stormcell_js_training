@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="register()">CLICK TO REGISTER</button>
+    <script>
+        const token = "Z2yG20oN6lSx6qZhlI1zEOxKmH1dSHewfATVDWcD8AIMRGP45pJuPhBTxDxuqdGx4KiepV8E1bDdWPWVSjdXnFI9SsqlKZQLFx1uxExc8fFguNNjien8V7O6D7hiyHA1i8V6c7CrDAlws6dIjMlsexNsMJHhjd";
+        const register = async () => {
+            await fetch("http://3.145.60.34/register", {
+                method:"post",
+                body:JSON.stringify({
+                    email:"victory@gmail.com",
+                    password:"oviseal@2022"
+                }),
+                header:{
+                    "Content-Type":"application/json",
+                    "Authorization":`Bearer ${token}`
+                },
+            })
+            .then((response)=>{
+                return response.json()
+            })
+            .then((feedback)=>{
+                console.log(feedback)
+            })
+        }
+        
+    </script>
+</body>
+</html>
