@@ -13,7 +13,11 @@
     <section class="py-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
+<<<<<<< HEAD
                 <table class="table  table-striped">
+=======
+                <table class="table table-striped">
+>>>>>>> 20adf0f953ec6d4da18912100c74a01e29e8db82
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -28,8 +32,13 @@
                             <td>tom@stormcelltech.com</td>
                             <td>Tom</td>
                             <td>
+<<<<<<< HEAD
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
                                 <button  onclick="changeRowColor(event)" class="btn btn-primary btn-sm"> Edit <span><i class="fa fa-edit"></i></span></button>
+=======
+                                <button onclick="deleteRow(event, 'red')" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
+                                <button onclick="changeRowColor(event, 'red')" class="btn btn-primary btn-sm" >Edit <span><i class="fa fa-edit"></i></span></button>
+>>>>>>> 20adf0f953ec6d4da18912100c74a01e29e8db82
                             </td>
                         </tr>
                         <tr>
@@ -38,7 +47,11 @@
                             <td>Jerry</td>
                             <td>
                                 <button onclick="deleteRow(event)" class="btn btn-danger btn-sm">Delete <span><i class="fa fa-trash"></i></span></button>
+<<<<<<< HEAD
                                 <button  onclick="changeRowColor(event)" class="btn btn-primary btn-sm"> Edit <span><i class="fa fa-edit"></i></span></button>
+=======
+                                <button onclick="changeRowColor(event, 'gold')" class="btn btn-primary btn-sm">Edit <span><i class="fa fa-edit"></i></span></button>
+>>>>>>> 20adf0f953ec6d4da18912100c74a01e29e8db82
                             </td>
                         </tr>
                         <tr>
@@ -86,12 +99,17 @@
 
           //Deleting the color row background on clicking the delete button
         const deleteRow = (event) => {
+            // retreive the clicked button
             const clickedBtn = event.target;
             // const rowToDelete = clickedBtn.parentElement.parentElement
+
+            // find the closest tr element in the parent tree
             const rowToDelete = clickedBtn.closest("tr");
+            // remove the closest tr element
             rowToDelete.remove();
         }
 
+<<<<<<< HEAD
         //Changing the color of the row background on clicking the edit button
 
         const changeRowColor = (event) => {
@@ -111,6 +129,12 @@
             //Design the modal as you will love it to appear and then hide it afterwards.
            
         }
+=======
+        const changeRowColor = (event, color) => {
+            event.target.closest("tr").style.backgroundColor = color;
+        }
+
+>>>>>>> 20adf0f953ec6d4da18912100c74a01e29e8db82
     </script>
 </body>
 </html>
