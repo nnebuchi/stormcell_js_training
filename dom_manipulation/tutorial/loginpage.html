@@ -72,7 +72,7 @@
             if(!specialCharsRegex.test(password)){
                 document.querySelector("#password-val-msg").textContent ="Password must have special character";
                 document.querySelector("#password").style.border = "2px solid #dc3545";
-                return;
+                return; 
             }
             // Rule 4: confirm password must match password
             if(c_password !== password ){
