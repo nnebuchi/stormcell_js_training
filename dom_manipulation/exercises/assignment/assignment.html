@@ -16,7 +16,7 @@
                 <form action="/submit" onsubmit="event.preventDefault(); submitForm();">
                     <div class="mb-3 ">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
                         <span id="email-val-msg" class="text-danger validation-msg"></span>
                     </div>
                     <div class="mb-3 ">
@@ -78,10 +78,11 @@
                 }
 
                 // //Verification for valid email format
-                const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*?/;
-                if(validRegex.email(email)){
+                const validRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if(email.match(validRegex)){
                     document.querySelector("#email-val-msg").textContent= "invalid email";
                     document.querySelector("#email").style.border = "2px solid #dc3545";
+                    return
                 }
                 
 
